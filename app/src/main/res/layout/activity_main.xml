@@ -19,13 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp" />
 
-        <EditText
-            android:hint="Email"
-            android:id="@+id/email_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,16 +91,6 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingTop="30dp"
-            android:text="Order Summary"
-            android:textAllCaps="true"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
 
             android:id="@+id/order_summary_text_view"
             android:layout_width="wrap_content"
@@ -122,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:onClick="submitOrder"
             android:text="Order"
             android:textSize="18sp" />
