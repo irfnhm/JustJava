@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:background="#FFEAD1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context="com.example.irfan.justjava.MainActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dp"
+        android:text="Toppings"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/whipped_cream_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="24dp"
+        android:textSize="16sp"
+        android:text="Whipped cream"/>
+
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="24dp"
+        android:textSize="16sp"
+        android:text="Chocolate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dp"
+        android:text="Quantity"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp"
-            android:textColor="@android:color/black"
-            android:paddingLeft="10dp"
-            android:text="Quantity"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <Button
-            android:onClick="increment"
-            android:text="+"
+            android:onClick="decrement"
+            android:text="-"
             android:layout_marginLeft="10dp"
             android:layout_width="48dp"
             android:layout_height="48dp" />
@@ -41,40 +74,43 @@
             android:textColor="@android:color/black"/>
 
         <Button
-            android:onClick="decrement"
-            android:text="-"
-            android:layout_marginLeft="10dp"
+            android:onClick="increment"
+            android:text="+"
+            android:layout_marginLeft="30dp"
             android:layout_width="48dp"
             android:layout_height="48dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingLeft="10dp"
-            android:text="Price"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/price_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingVertical="10dp"
-            android:text="$0"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"/>
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:text="Order"
-            android:textSize="18sp"
-            android:onClick="submitOrder"/>
-
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingLeft="10dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="Order Summary"
+        android:textSize="18sp" />
+
+    <TextView
+
+        android:id="@+id/order_summary_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Order"
+        android:textSize="18sp"
+        android:onClick="submitOrder"/>
+</LinearLayout>
+
+</ScrollView>
